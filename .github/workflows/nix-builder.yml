@@ -25,7 +25,7 @@ on:
       environment:
         description: "GitHub Actions environment name to source secrets from (optional)"
         type: string
-        default: ""
+        default: "Nix Builders"
       tailscale_tags:
         description: "Tailscale ACL tags to apply to runner nodes (optional)"
         type: string
