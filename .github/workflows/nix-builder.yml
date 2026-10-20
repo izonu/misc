@@ -25,7 +25,7 @@ on:
       environment:
         description: "GitHub Actions environment name to source secrets from (optional)"
         type: string
-        default: "Nix Builders"
+        default: ""
       tailscale_tags:
         description: "Tailscale ACL tags to apply to runner nodes (optional)"
         type: string
@@ -55,7 +55,7 @@ jobs:
       # secrets (OAuth or OIDC) are stored within an Environment
       # (e.g. "Nix Builders" or your custom env name).
       # If using standard Repository Secrets, set this to "" or omit this line.
-      environment: ${{ inputs.environment != '' && inputs.environment || '' }}
+      # environment: ${{ inputs.environment != '' && inputs.environment || '' }}
       tailscale_tags: ${{ inputs.tailscale_tags }}
       matrix: ${{ inputs.matrix }}
       session_id: ${{ inputs.session_id }}
